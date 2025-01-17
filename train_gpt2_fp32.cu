@@ -59,7 +59,7 @@ void cublasCheck(cublasStatus_t status, const char *file, int line)
 }
 #define cublasCheck(status) { cublasCheck((status), __FILE__, __LINE__); }
 
-static cublasComputeType_t cublas_compute_type;
+[[maybe_unused]]static cublasComputeType_t cublas_compute_type;
 cublasHandle_t cublas_handle;
 
 namespace cg = cooperative_groups;
