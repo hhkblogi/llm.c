@@ -8,8 +8,8 @@ CFLAGS_COND = -march=native
 # Find nvcc
 SHELL_UNAME = $(shell uname)
 REMOVE_FILES = rm -f
-OUTPUT_FILE = -o $@
-CUDA_OUTPUT_FILE = -o $@
+OUTPUT_FILE = -o ${OUTPUT_DIR}/$@
+CUDA_OUTPUT_FILE = -o ${OUTPUT_DIR}/$@
 
 # Default O3 CPU optimization level for NVCC (0 for fastest compile time)
 FORCE_NVCC_O ?= 3
